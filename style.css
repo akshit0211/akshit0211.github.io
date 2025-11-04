@@ -1,0 +1,151 @@
+/* ==== Retro Resume: Old Games Theme ==== */
+:root{
+  --bg:#0b0f1a;
+  --bg2:#0f1526;
+  --fg:#d3f7ff;
+  --accent:#7df9ff;
+  --accent2:#ff5df0;
+  --good:#57ff89;
+  --warn:#ffd857;
+  --card:#121a2e;
+  --muted:#9ec6cf;
+  --shadow:0 8px 24px rgba(0,0,0,.35);
+}
+
+.btn.primary.download {
+  border-color: var(--accent2);
+  background: var(--accent2);
+  color: #001b22;
+  box-shadow: 0 0 8px var(--accent2), 0 0 20px rgba(255,93,240,.4);
+}
+.btn.primary.download:hover {
+  transform: scale(1.05);
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:"Press Start 2P", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  background: radial-gradient(1200px 600px at 20% 10%, #15213f 0%, var(--bg) 60%) fixed,
+              linear-gradient(45deg, #0b0f1a 0%, #0b0f1a 100%) fixed;
+  color:var(--fg);
+  line-height:1.6;
+  letter-spacing:.3px;
+  overflow-x:hidden;
+}
+
+/* CRT + scanlines */
+.crt-overlay{
+  position:fixed; inset:0; pointer-events:none;
+  background: repeating-linear-gradient(0deg, rgba(255,255,255,.05), rgba(255,255,255,.05) 1px, transparent 2px, transparent 3px);
+  mix-blend-mode: overlay;
+  opacity:.15;
+}
+.scanlines{
+  position:absolute; inset:0;
+  background: repeating-linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.03) 2px, transparent 4px, transparent 6px);
+  pointer-events:none;
+}
+
+/* HUD */
+.hud{
+  position:sticky; top:0; z-index:20;
+  display:flex; align-items:center; justify-content:space-between;
+  padding:10px 14px;
+  background: linear-gradient(180deg, rgba(10,14,28,.9), rgba(10,14,28,.6));
+  backdrop-filter: blur(6px);
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+.hud .brand{ margin-left:6px; font-size:12px; color:var(--muted)}
+.hud .tab{
+  background:none; border:1px solid rgba(125,249,255,.4);
+  color:var(--accent); padding:8px 10px; margin-left:8px;
+  cursor:pointer; font-size:10px; border-radius:6px;
+}
+.hud .tab.active{ background:var(--accent); color:#001b22; border-color:var(--accent)}
+
+/* Screens */
+.screen{ display:none; min-height:calc(100dvh - 64px); position:relative; }
+.screen.active{ display:block; }
+.frame{ max-width:1100px; margin:0 auto; padding:48px 16px; }
+
+.title{ text-align:center; font-size:40px; margin:60px 0 8px; color:var(--accent) }
+.subtitle{ text-align:center; color:var(--muted); margin-bottom:20px }
+.menu{ display:flex; gap:10px; justify-content:center; flex-wrap:wrap; margin-top:20px }
+.hint{ text-align:center; color:var(--muted); font-size:10px; margin-top:20px }
+
+/* Buttons */
+.btn{
+  font-family:inherit; font-size:12px; letter-spacing:.5px;
+  border:2px solid var(--accent); color:var(--accent);
+  background:transparent; padding:12px 18px; border-radius:10px;
+  cursor:pointer; box-shadow: var(--shadow);
+}
+.btn:hover{ transform:translateY(-1px); }
+.btn.primary{ background:var(--accent); color:#001b22; }
+.btn.ghost{ border-color:rgba(125,249,255,.4); color:var(--muted) }
+.btn.small{ font-size:10px; padding:8px 10px }
+
+/* Cards */
+.card{
+  background: linear-gradient(180deg, rgba(13,18,32,.9), rgba(13,18,32,.75));
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:14px; padding:16px; box-shadow:var(--shadow);
+}
+.bio{ display:grid; grid-template-columns:120px 1fr; gap:16px; align-items:center }
+.avatar{ width:100px; height:100px; border-radius:12px; border:3px solid var(--accent2); object-fit:contain }
+
+.stats{ list-style:none; padding:0; display:flex; gap:16px; margin:8px 0 }
+.desc{ color:#d6f1f6; font-size:12px }
+
+.grid{ display:grid; gap:16px }
+.skills-grid{ grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)) }
+.projects-grid{ grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)) }
+
+.badge{ padding:4px 8px; background:var(--good); color:#062013; border-radius:8px; font-size:10px }
+.game header{ display:flex; align-items:center; justify-content:space-between }
+
+/* Timeline */
+.timeline{ position:relative; margin:24px 0; }
+.timeline::before{
+  content:""; position:absolute; left:16px; top:0; bottom:0;
+  width:2px; background:linear-gradient(var(--accent), transparent);
+}
+.checkpoint{ position:relative; padding-left:48px; margin:24px 0 }
+.checkpoint .dot{
+  position:absolute; left:8px; top:10px; width:16px; height:16px; background:var(--accent2);
+  border-radius:50%; box-shadow:0 0 12px var(--accent2);
+}
+.year{ display:block; color:var(--muted); font-size:10px; margin-bottom:10px }
+
+/* Contact */
+form.contact label{ display:block; font-size:10px; color:var(--muted); margin:10px 0 6px }
+form.contact input, form.contact textarea{
+  width:100%; padding:12px; border-radius:10px; border:1px solid rgba(255,255,255,.1);
+  background:#0f162a; color:var(--fg); font-family:inherit; font-size:12px;
+}
+form.contact button{ margin-top:10px }
+
+/* Level titles */
+.level{ color:var(--warn); margin:0 0 16px; font-size:16px; text-shadow:0 0 6px rgba(255,216,87,.3) }
+
+/* Footer */
+.footer{ text-align:center; padding:30px 0; color:var(--muted); font-size:10px }
+
+/* Start screen specific */
+#screen-start .frame{ display:flex; flex-direction:column; align-items:center }
+#btn-start{ margin-top:10px }
+
+/* Accessibility helpers */
+kbd{
+  padding:2px 4px; border:1px solid rgba(255,255,255,.25);
+  border-radius:4px; font-size:10px; background:#0f162a;
+}
+
+/* Responsive tweaks */
+@media (max-width:700px){
+  .title{ font-size:32px }
+  .bio{ grid-template-columns:1fr; text-align:center }
+  .stats{ justify-content:center }
+}
