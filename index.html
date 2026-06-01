@@ -1,304 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Insert Coin — Retro Resume</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
-  <meta name="description" content="A retro arcade-style resume site." />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Akshit Sharma | Software Engineer</title>
+  <link rel="stylesheet" href="style.css"/>
 </head>
+
 <body>
-  <div class="crt-overlay"></div>
 
-  <!-- Splash / Start Screen -->
-  <section id="screen-start" class="screen active" aria-label="Start Screen">
-    <div class="scanlines"></div>
-    <div class="frame">
-      <h1 class="title">INSERT COIN</h1>
-      <p class="subtitle">to view resume</p>
-      <button id="btn-start" class="btn primary" aria-label="Start the experience">▶ START</button>
-
-      <div class="menu">
-        <button class="btn ghost" data-target="about">ABOUT</button>
-        <button class="btn ghost" data-target="experience">EXPERIENCE</button>
-        <button class="btn ghost" data-target="education">EDUCATION</button>
-        <button class="btn ghost" data-target="skills">SKILLS</button>
-        <button class="btn ghost" data-target="projects">PROJECTS</button>
-        <button class="btn ghost" data-target="contact">CONTACT</button>
-      </div>
-      <p class="hint">Hint: Use ◀ ▶ to switch levels • Press M to mute • Press ▲ ▼ ◀ ▶ to unlock secret feature</p>
+<header class="nav">
+  <div class="container nav-content">
+    <h1 class="logo">Akshit Sharma</h1>
+    <div class="links">
+      <a href="#experience">Experience</a>
+      <a href="#projects">Work</a>
+      <a href="#skills">Skills</a>
+      <a href="resume.pdf" target="_blank" class="btn">Resume</a>
     </div>
-  </section>
+  </div>
+</header>
 
-  <!-- HUD -->
-  <header class="hud" aria-label="Heads Up Display">
-    <div class="hud-left">
-      <span class="logo">🕹️</span>
-      <a href="resume.pdf" download class="btn primary download">Retro Resume</a>
+<section class="hero container">
+  <h2>Software Engineer building scalable systems and AI-driven applications</h2>
+  <p class="subtitle">
+    Experience across enterprise platforms (Lenovo, Cognizant) and high-performance ML systems.
+  </p>
+
+  <div class="hero-stats">
+    <span>💼 3+ Years Experience</span>
+    <span>⚡ 100+ Features Shipped</span>
+    <span>📈 60% Performance Gains</span>
+  </div>
+
+  <div class="hero-actions">
+    <a href="resume.pdf" class="btn primary">Download Resume</a>
+    <a href="https://github.com/yourusername" target="_blank" class="btn">GitHub</a>
+    <a href="https://linkedin.com/in/yourprofile" target="_blank" class="btn">LinkedIn</a>
+  </div>
+</section>
+
+<section id="experience" class="container section">
+  <h3>Experience</h3>
+
+  <div class="item">
+    <h4>Software Developer — Iris Software (Lenovo)</h4>
+    <span class="date">Aug 2025 — Present</span>
+    <ul>
+      <li>Reduced service-center defects by <strong>60%</strong> by optimizing backend workflows.</li>
+      <li>Designed microservices using <strong>Spring Boot + AWS</strong>, improving scalability.</li>
+      <li>Implemented anomaly detection for authentication security.</li>
+    </ul>
+  </div>
+
+  <div class="item">
+    <h4>Software Developer — Lenovo</h4>
+    <span class="date">Aug 2024 — Aug 2025</span>
+    <ul>
+      <li>Improved API latency by <strong>25%</strong> using C# and JavaScript.</li>
+      <li>Implemented GDPR-compliant data security systems.</li>
+      <li>Optimized Azure storage for cost savings.</li>
+    </ul>
+  </div>
+
+  <div class="item">
+    <h4>Software Engineer — One Community</h4>
+    <span class="date">Jun 2024 — Aug 2024</span>
+    <ul>
+      <li>Built MERN analytics platform improving accuracy by <strong>35%</strong>.</li>
+      <li>Automated CI/CD pipelines using GitLab.</li>
+    </ul>
+  </div>
+
+  <div class="item">
+    <h4>ML Intern — NCSA</h4>
+    <span class="date">May 2023 — Jul 2023</span>
+    <ul>
+      <li>Ranked <strong>Top 2 globally</strong> in Kaggle competition.</li>
+      <li>Processed <strong>874K+ images</strong> using distributed systems.</li>
+      <li>Achieved <strong>0.89 F1-score</strong>.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="projects" class="container section">
+  <h3>Selected Work</h3>
+
+  <div class="case-study">
+    <h4>Recommendation System</h4>
+    <p class="meta">Python • PyTorch • Deep Learning</p>
+
+    <div class="case-grid">
+      <div>
+        <h5>Problem</h5>
+        <p>Sparse user-item interactions reduce recommendation quality.</p>
+      </div>
+
+      <div>
+        <h5>Approach</h5>
+        <p>Neural collaborative filtering with embeddings and deep layers.</p>
+      </div>
+
+      <div>
+        <h5>Impact</h5>
+        <p>Improved personalization and recommendation accuracy.</p>
+      </div>
     </div>
-    <nav class="hud-right" aria-label="Level Navigation">
-      <button class="tab" data-target="about">L-1 ABOUT</button>
-      <button class="tab" data-target="experience">L-2 EXP</button>
-      <button class="tab" data-target="education">L-3 EDU</button>
-      <button class="tab" data-target="skills">L-4 SKILLS</button>
-      <button class="tab" data-target="projects">L-5 PROJECTS</button>
-      <button class="tab" data-target="contact">L-6 CONTACT</button>
-    </nav>
-  </header>
 
-  <!-- Levels -->
-  <main id="levels" tabindex="-1">
-    <!-- ABOUT -->
-    <section id="about" class="screen" aria-label="About">
-      <div class="frame">
-        <h2 class="level">LEVEL 1 — ABOUT</h2>
-        <div class="card bio">
-          <img src="profilePic.jpeg" alt="Your avatar" class="avatar" />
-          <div class="bio-text">
-            <h3 class="name">Akshit Sharma</h3>
-            <p class="tagline"><span class="role">Software Developer</span> who ships clean, fast, and bug free code.</p>
-            <p>Current Location: Ashburn, Virginia, USA</p>   
-            <p>🌎 Open to Remote/Onsite Position</p>
-            <h6>I'm a Software Engineer and UIUC Computer Science graduate with hands-on experience building scalable, cloud-native, 
-            and AI-powered systems across finance, enterprise hardware, and non-profit sectors.</h6>
-              
-            <h6>🔍Currently exploring full-time opportunities in Software Development, AI Engineering, or Cloud Systems, where I can contribute 
-            to building intelligent, high-performance systems that scale.</h6>
-          </div>
-        </div>
+    <a href="https://github.com/akshit0211/Movie-RecommendationSystem">View Code →</a>
+  </div>
+
+  <div class="case-study">
+    <h4>Text Summarizer (BERT)</h4>
+    <p class="meta">JavaScript • NLP • Transformers</p>
+
+    <div class="case-grid">
+      <div>
+        <h5>Problem</h5>
+        <p>Long-form content is time-consuming to read.</p>
       </div>
-    </section>
 
-    <!-- SKILLS -->
-    <section id="skills" class="screen" aria-label="Skills">
-      <div class="frame">
-        <h2 class="level">LEVEL 4 — SKILLS</h2>
-        <div class="grid skills-grid">
-          <div class="card stat">
-            <h3>Programming Languages:</h3>
-            <ul>
-              <li>Java</li>
-              <li>C#</li>
-              <li>Python</li>
-              <li>C</li>
-              <li>HTML</li>
-              <li>CSS</li>
-              <li>SQL</li>
-              <li>JavaScript</li>
-            </ul>
-          </div>
-          <div class="card stat">
-            <h3>Frameworks:</h3>
-            <ul>
-              <li>React</li>
-              <li>NodeJS</li>
-              <li>ExpressJS</li>
-              <li>Rest API</li>
-              <li>Spring Boot</li>
-              <li>MVC</li>
-              <li>JUnit</li>
-            </ul>
-          </div>
-          <div class="card stat">
-            <h3>Distributed Systems & DevOps:</h3>
-            <ul>
-              <li>Docker</li>
-              <li>Git</li>
-              <li>GitLab</li>
-              <li>CI/CD</li>
-              <li>AWS</li>
-              <li>Azure</li>
-            </ul>
-          </div>
-          <div class="card stat">
-            <h3>Databases & Big Data:</h3>
-            <ul>
-              <li>Oracle</li>
-              <li>MySQL</li>
-              <li>MongoDB</li>
-              <li>Apache Kafka</li>
-              <li>Apache Spark</li>
-            </ul>
-          </div>
-        </div>
+      <div>
+        <h5>Approach</h5>
+        <p>BERT-based summarization optimized for browser usage.</p>
       </div>
-    </section>
 
-    <!-- PROJECTS -->
-    <section id="projects" class="screen" aria-label="Projects">
-      <div class="frame">
-        <h2 class="level">LEVEL 5 — PROJECTS</h2>
-        <div class="grid projects-grid">
-          <article class="card game">
-            <header>
-              <h3>SocialNetwork</h3>
-            </header>
-            <p>Developed a social media platform using React, Redux, NodeJS, and ExpressJS.</p>
-            <div class="actions">
-              <a href="https://github.com/akshit0211/SocialNetwork" class="btn small">Code</a>
-            </div>
-          </article>
-          <article class="card game">
-            <header>
-              <h3>Recommendation System</h3>
-            </header>
-            <p>Constructed an advanced recommendation system using Neural Collaborative Filtering on the MovieLens dataset.</p>
-            <div class="actions">
-              <a href="https://github.com/akshit0211/Movie-RecommendationSystem" class="btn small">Code</a>
-            </div>
-          </article>
-          <article class="card game">
-            <header>
-              <h3>IntelliAbstract - "Text Summarizer"</h3>
-            </header>
-            <p>Designed a Chrome extension using the BERT model that offers immediate high-quality text summarization to users.</p>
-            <div class="actions">
-              <a href="https://github.com/satvikp221b/-CS510-IntelliAbstract" class="btn small">Code</a>
-            </div>
-          </article>
-        </div>
+      <div>
+        <h5>Impact</h5>
+        <p>Reduced reading time while preserving meaning.</p>
       </div>
-    </section>
+    </div>
 
-    <!-- EXPERIENCE -->
-    <section id="experience" class="screen" aria-label="Experience">
-      <div class="frame">
-        <h2 class="level">LEVEL 2 — EXPERIENCE</h2>
-        <div class="timeline">
-          <div class="checkpoint">
-            <div class="dot"></div>
-            <div class="content card">
-              <h3>Software Developer @ Iris Software Inc. (Lenovo Contract)</h3>
-              <span class="year">Aug 2025 — Present</span>
-              <ul>
-                <li>Enhanced Motorola’s global backend Java apps at Lenovo, boosting efficiency and reducing service-center defects by 60%.</li>
-                <li>Built cloud-native microservices leveraging Java Spring Boot and AWS S3/EC2, improving scalability and cost efficiency.</li>
-                <li>Designed login anomaly detection to prevent breaches and AI features for streamlining day-to-day business operations.</li>
-              </ul>
-            </div>
-          </div>
-          <div class="checkpoint">
-            <div class="dot"></div>
-            <div class="content card">
-              <h3>Software Developer @ Lenovo</h3>
-              <span class="year">Aug 2024 — Aug 2025</span>
-              <ul>
-                <li>Maintained and enhanced C# and Javascript services within Microsoft Dynamics 365, improving API latency by 25%.</li>
-                <li>Implemented GDPR-compliant measures to secure customer data and restricting U.S. sensitive data access internationally.</li>
-                <li>Leveraged Microsoft Azure to detect exceptions, resolve bugs, and optimized data archiving for significant cost savings.</li>
-              </ul>
-            </div>
-          </div>
-          <div class="checkpoint">
-            <div class="dot"></div>
-            <div class="content card">
-              <h3>Software Engineer @ One Community, Inc.</h3>
-              <span class="year">June 2024 — Aug 2024</span>
-              <ul>
-                <li>Designed a MERN-based analytics system to track employee productivity, enhancing workforce insights accuracy by 35%.</li>
-                <li>Engineered and automated GitLab CI/CD pipelines, reducing deployment overhead and enabling real-time monitoring.</li>
-              </ul>
-            </div>
-          </div>
-          <div class="checkpoint">
-            <div class="dot"></div>
-            <div class="content card">
-              <h3>Machine Learning Intern @ National Center for Supercomputing Applications</h3>
-              <span class="year">May 2023 — July 2023</span>
-              <ul>
-                <li>Secured 2nd place in a global Kaggle challenge with ConvNextV2 model analyzing 36K+ images across 18 conditions.</li>
-                <li>Leveraged the Delta Supercomputer for distributed high-speed training, achieving 70% accuracy in prediction.</li>
-                <li>Engineered parallelized image pipelines using ResNet50, classifying 874K+ geo-tagged photos with an F1-score of 0.89.</li>
-                <li>Enhanced image segmentation precision by 15% using Meta AI’s Segment Anything for adaptive object detection.</li>
-              </ul>
-            </div>
-          </div>
-          <div class="checkpoint">
-            <div class="dot"></div>
-            <div class="content card">
-              <h3>Programmer Analyst (Software Engineer) @ Cognizant Technology Solutions</h3>
-              <span class="year">Aug 2020 — May 2022</span>
-              <ul>
-                <li>Engineered Java applications for financial institutions using Temenos Transact core banking software using Agile SDLC.</li>
-                <li>Integrated RESTful APIs to support dynamic front-end functionalities and successfully resolved critical bugs in the codebase.</li>
-                <li>Led development of an agricultural insurance website using Java Spring Framework, reducing customer complaints by 30%.</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+    <a href="https://github.com/satvikp221b/-CS510-IntelliAbstract">View Code →</a>
+  </div>
+</section>
 
-    <!-- Education-->
-    <section id="education" class="screen" aria-label="Education">
-      <div class="frame">
-        <h2 class="level">LEVEL 3 — EDUCATION</h2>
-        <div class="timeline">
-          <div class="checkpoint">
-            <div class="dot"></div>
-            <div class="content card">
-              <span class="year">Master's in Computer Science</span>
-              <ul>
-                <li>University of Illinois, Urbana-Champaign</li>
-                <h6>GPA: 3.54</h6>
-                <h6>Aug 2022 - Dec 2023</h6>
-              </ul>
-            </div>
-          </div>
-          <div class="checkpoint">
-            <div class="dot"></div>
-            <div class="content card">
-              <span class="year">B.Tech in Computer Science & Engineering</span>
-              <ul>
-                <li>Jaypee University of Engineering and Technology, India</li>
-                <h6>GPA: 3.67</h6>
-                <h6>July 2016 - June 2020</h6>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+<section class="container section">
+  <h3>What I'm Interested In</h3>
+  <p>
+    Building scalable backend systems, distributed infrastructure, and AI-powered applications.
+  </p>
+  <ul>
+    <li>Distributed systems</li>
+    <li>Machine learning in production</li>
+    <li>Cloud infrastructure</li>
+  </ul>
+</section>
 
-    <!-- CONTACT -->
-    <section id="contact" class="screen" aria-label="Contact">
-      <div class="frame">
-        <h2 class="level">LEVEL 6 — CONTACT</h2>
-        <form class="card contact" data-netlify="true" name="contact" method="POST" netlify>
-          <p class="hint">Email: <a href="mailto:sharma.akshit0211@gmail.com">sharma.akshit0211@gmail.com</a></p>
-        </form>
-      </div>
-    </section>
+<section id="skills" class="container section">
+  <h3>Skills</h3>
 
-    <!-- SECRET (Konami unlock) -->
-    <section id="secret" class="screen" aria-label="Secret Achievements">
-      <div class="frame">
-        <h2 class="level">BONUS STAGE — ACHIEVEMENTS</h2>
-        <ul class="achievements">
-          <li class="card">Research Paper
-          <a href="https://link.springer.com/chapter/10.1007/978-981-15-2854-5_38">(Link)</a></li>
-          <li class="card">🏆 Shipped 100+ production features</li>
-          <li class="card">⚡ Fixed a Sev‑1 at 6AM (Sunday Morning)</li>
-          <li class="card">Many More to Come....</li>
-        </ul>
-      </div>
-    </section>
-  </main>
+  <div class="skills">
+    <div>
+      <h4>Languages</h4>
+      <p>Java, Python, C#, JavaScript, SQL</p>
+    </div>
 
-  <footer class="footer">
-    <p>© <span id="year"></span> Akshit Sharma — Press <kbd>?</kbd> for help</p>
-  </footer>
+    <div>
+      <h4>Frameworks</h4>
+      <p>Spring Boot, React, Node.js</p>
+    </div>
 
-  <audio id="sfx-coin" preload="auto">
-    <source src="https://actions.google.com/sounds/v1/cartoon/wood_plank_flicks.ogg" type="audio/ogg">
-  </audio>
-  <audio id="sfx-move" preload="auto">
-    <source src="https://actions.google.com/sounds/v1/cartoon/wood_plank_flicks.ogg" type="audio/ogg">
-  </audio>
+    <div>
+      <h4>Cloud & DevOps</h4>
+      <p>AWS, Azure, Docker, CI/CD</p>
+    </div>
 
-  <script src="script.js"></script>
+    <div>
+      <h4>Data Systems</h4>
+      <p>Kafka, Spark, MongoDB</p>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <p>© 2026 Akshit Sharma</p>
+</footer>
+
 </body>
 </html>
